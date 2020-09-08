@@ -1,4 +1,4 @@
-import { FETCH_NEWS } from "../actions/types";
+import { FETCH_NEWS, FETCH_ARTICLE } from "../actions/types";
 
 const initialState = {
   news: [],
@@ -11,8 +11,14 @@ export default function (state = initialState, action) {
       console.log("reducer");
       return {
         ...state,
-        items: action.payload,
+        news: action.payload,
       };
+    case FETCH_ARTICLE:
+      return {
+        ...state,
+        newsArticle: action.payload,
+      };
+
     default:
       return state;
   }

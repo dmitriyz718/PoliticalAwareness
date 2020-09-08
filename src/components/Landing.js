@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
+import { connect } from "react-redux";
+import { fetchNews } from "../actions/News";
 class Landing extends Component {
+  componentDidMount() {
+    this.props.fetchNews();
+  }
   render() {
     return (
       <Container>
@@ -11,4 +16,7 @@ class Landing extends Component {
     );
   }
 }
-export default Landing;
+const mapStateToProps = (state) => ({
+  news: state.news.news,
+});
+export default connect(mapStateToProps, { fetchNews })(Landing);
