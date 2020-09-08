@@ -8,10 +8,10 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_NEWS:
-      console.log("reducer");
+      console.log(action.payload.articles);
       return {
         ...state,
-        news: action.payload,
+        news: action.payload.articles,
       };
     case FETCH_ARTICLE:
       return {
