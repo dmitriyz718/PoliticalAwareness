@@ -1,28 +1,85 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
 import { connect } from "react-redux";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Row,
+  Col,
+  Form,
+  Input,
+} from "reactstrap";
 import { fetchNews } from "../actions/News";
 class Landing extends Component {
+  state = {
+    key: "",
+  };
   componentDidMount() {
     this.props.fetchNews();
   }
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+  onSubmit = (e) => {
+    e.preventDefault();
+    this.props.fetchNews(this.state.key);
+  };
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <div key={article.id}>
-          <h2>Title: {article.title}</h2>
-          <p>Description: {article.description}</p>
-          <p>
-            <strong>Author: </strong>
-            {article.author}
-          </p>
-        </div>
+        <Row>
+          <Col xs="auto">
+            <Card
+              id={article.id}
+              style={{
+                height: "40%",
+                width: "40%",
+                border: "solid",
+                margin: "2rem",
+              }}
+            >
+              <CardImg
+                top
+                width="100%"
+                src={article.urlToImage}
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardTitle>
+                  <strong>{article.title}</strong>
+                </CardTitle>
+                <CardSubtitle>Athor: {article.author}</CardSubtitle>
+                <CardText>{article.description}</CardText>
+                <Button color="primary" size="lg" active>
+                  Primary link
+                </Button>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
       );
     });
     return (
       <Container>
         <div>
-          <h1>Landing Page</h1>
+          <h1>Political Awareness</h1>
+          <Form onSubmit={this.onSubmit}>
+            <Input
+              type="text"
+              onChange={this.onChange}
+              id="key"
+              name="key"
+              placeholder="keywords"
+            ></Input>
+            <Button color="primary" size="lg" active>
+              Search
+            </Button>
+          </Form>
           {newsItems}
         </div>
       </Container>
