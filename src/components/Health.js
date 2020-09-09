@@ -30,7 +30,7 @@ class Health extends Component {
         <Row>
           <Col xs="auto">
             <Card
-              id={article.id}
+              key={article.id}
               style={{
                 height: "40%",
                 width: "40%",
