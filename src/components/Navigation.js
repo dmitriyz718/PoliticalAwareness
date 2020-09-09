@@ -8,7 +8,7 @@ class Navigation extends Component {
   render() {
     return (
       <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="/">Navbar</Navbar.Brand>
+        <Navbar.Brand href="/">News Dash</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/health">Health Care</Nav.Link>
           <Nav.Link href="/immigration">Immigration</Nav.Link>
