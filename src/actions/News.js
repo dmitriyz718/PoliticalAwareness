@@ -1,4 +1,4 @@
-import { FETCH_NEWS, FETCH_ARTICLE } from "./types";
+import { FETCH_NEWS, FETCH_ARTICLE, TRENDING_NEWS } from "./types";
 export const fetchNews = (key) => (dispatch) => {
   let url = "";
   if (key == "") {
@@ -23,6 +23,24 @@ export const fetchNews = (key) => (dispatch) => {
     .then((items) =>
       dispatch({
         type: FETCH_NEWS,
+        payload: items,
+      })
+    )
+
+    .catch((err) => {
+      console.log(err);
+    });
+};
+export const trendingNews = () => (dispatch) => {
+  let url =
+    "https://newsapi.org/v2/top-headlines?country=us&apiKey=fbd471666ac742f6b216645a7345e0fe";
+
+  let req = new Request(url);
+  fetch(req)
+    .then((res) => res.json())
+    .then((items) =>
+      dispatch({
+        type: TRENDING_NEWS,
         payload: items,
       })
     )

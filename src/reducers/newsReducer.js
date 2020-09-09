@@ -1,14 +1,14 @@
-import { FETCH_NEWS, FETCH_ARTICLE } from "../actions/types";
+import { FETCH_NEWS, FETCH_ARTICLE, TRENDING_NEWS } from "../actions/types";
 
 const initialState = {
   news: [],
+  trendingNews: [],
   newsArticle: {},
 };
 
 export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_NEWS:
-      console.log(action.payload.articles);
       return {
         ...state,
         news: action.payload.articles,
@@ -18,7 +18,12 @@ export default function (state = initialState, action) {
         ...state,
         newsArticle: action.payload,
       };
-
+    case TRENDING_NEWS:
+      console.log(action.payload);
+      return {
+        ...state,
+        trendingNews: action.payload.articles,
+      };
     default:
       return state;
   }
