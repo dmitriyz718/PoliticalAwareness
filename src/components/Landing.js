@@ -56,7 +56,7 @@ class Landing extends Component {
                 <CardSubtitle>Athor: {article.author}</CardSubtitle>
                 <CardText>{article.description}</CardText>
                 <Button color="primary" size="lg" active>
-                  Primary link
+                  View Article
                 </Button>
               </CardBody>
             </Card>
@@ -67,7 +67,7 @@ class Landing extends Component {
     return (
       <Container>
         <div>
-          <h1>Political Awareness</h1>
+          <h1>News Dash</h1>
           <Form onSubmit={this.onSubmit}>
             <Input
               type="text"
