@@ -63,7 +63,7 @@ class Climate extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Climate News</h1>
+          <h1>Informed - Climate News</h1>
           {newsItems}
         </div>
       </Container>

@@ -62,7 +62,7 @@ class Economy extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Economy</h1>
+          <h1>Informed - Economy</h1>
           {newsItems}
         </div>
       </Container>

@@ -62,7 +62,7 @@ class Criminal extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Criminal Justice</h1>
+          <h1>Informed - Criminal Justice</h1>
           {newsItems}
         </div>
       </Container>

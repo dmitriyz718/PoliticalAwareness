@@ -62,7 +62,7 @@ class Immigration extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Immigration</h1>
+          <h1>Informed - Immigration</h1>
           {newsItems}
         </div>
       </Container>

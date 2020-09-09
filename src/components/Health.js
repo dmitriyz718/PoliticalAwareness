@@ -62,7 +62,7 @@ class Health extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Health Care</h1>
+          <h1>Informed - Health Care</h1>
           {newsItems}
         </div>
       </Container>

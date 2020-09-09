@@ -62,7 +62,7 @@ class Foreign extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Foreign Policy</h1>
+          <h1>Informed - Foreign Policy</h1>
           {newsItems}
         </div>
       </Container>
