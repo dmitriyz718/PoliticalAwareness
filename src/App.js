@@ -14,7 +14,6 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Container>
-            <Navigation />
             <div div className="App">
               <Routes />
               <Trending />

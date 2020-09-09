@@ -11,6 +11,7 @@ import {
 import { fetchNews } from "../actions/News";
 import Trending from "./Trending";
 import NewsItem from "./NewsItem";
+import Navigation from "./Navigation";
 
 
 class Landing extends Component {
@@ -44,8 +45,9 @@ class Landing extends Component {
               Search
             </Button>
           </Form>
+          <Navigation/>
           <Row>
-            <Col xs="auto">
+            <Col>
               <NewsItem/>
             </Col>
             <Col>
