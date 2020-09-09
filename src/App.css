@@ -1,5 +1,5 @@
 .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .card {
@@ -14,7 +14,7 @@
   display: flex;
 }
 
-.global-search{ 
+.global-search {
   display: flex;
   justify-content: space-between;
   padding: 16px;
@@ -33,4 +33,3 @@
   margin-left: 16px;
   margin-right: 16px;
 }
-
