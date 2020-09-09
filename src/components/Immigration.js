@@ -13,6 +13,8 @@ import {
   Col,
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
+import NewsItem from "./NewsItem";
+
 class Immigration extends Component {
   componentDidMount() {
     this.props.fetchNews("immigration");
@@ -55,7 +57,9 @@ class Immigration extends Component {
       <Container>
         <div>
           <h1>Informed - Immigration</h1>
+          <Col>
           {newsItems}
+          </Col>
         </div>
       </Container>
     );

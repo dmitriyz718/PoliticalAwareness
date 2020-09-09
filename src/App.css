@@ -1,11 +1,36 @@
+.logo {
+  font-family: 'Playfair Display', serif;
+}
+
 .card {
   margin: 2rem;
 }
 
-#nav {
+.card-img {
   width: 100%;
 }
 
-/* .Navbar.Brand {
-  font-family: "Playfair Display", serif;
-} */
+.row {
+  display: flex;
+}
+
+.global-search{ 
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-control {
+  max-width: 700px;
+  width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
