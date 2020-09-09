@@ -49,3 +49,4 @@ export const trendingNews = () => (dispatch) => {
       console.log(err);
     });
 };
+export const fetchArticle = (article) => (dispatch) => {};

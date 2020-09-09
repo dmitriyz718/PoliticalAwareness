@@ -15,7 +15,7 @@ import {
 import { fetchNews } from "../actions/News";
 class Voting extends Component {
   componentDidMount() {
-    this.props.fetchNews("immigration");
+    this.props.fetchNews("voting news");
   }
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
