@@ -29,18 +29,8 @@ class Health extends Component {
       return (
         <Row>
           <Col xs="auto">
-            <Card
-              id={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
+            <Card id={article.id}>
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
@@ -62,7 +52,7 @@ class Health extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Health Care</h1>
+          <h1>Informed - Health Care</h1>
           {newsItems}
         </div>
       </Container>

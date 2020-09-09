@@ -62,7 +62,7 @@ class Voting extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Voting</h1>
+          <h1>Informed - Voting</h1>
           {newsItems}
         </div>
       </Container>

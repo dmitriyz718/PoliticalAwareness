@@ -13,6 +13,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
+        <Navigation />
           <Container>
             <div div className="App">
               <Routes />

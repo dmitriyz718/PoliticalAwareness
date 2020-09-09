@@ -62,7 +62,7 @@ class Guns extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Guns in the News</h1>
+          <h1>Informed - Guns in the News</h1>
           {newsItems}
         </div>
       </Container>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
+  Col,
   Card,
   CardImg,
   CardText,
@@ -51,9 +52,9 @@ class NewsItem extends Component {
       )
     })
     return (
-      <div>
+      <Col>
         {newsItems}
-      </div>
+      </Col>
     )
   }
 }

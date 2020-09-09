@@ -8,7 +8,8 @@ import { fetchNews } from "../actions/News";
 class Navigation extends Component {
   render() {
     return (
-      <Navbar className="m-2" id="nav">
+      <Navbar bg="dark" variant="dark" className="m-2" id="nav">
+        <Navbar.Brand href="/">Informed</Navbar.Brand>
         <Nav className="mr-auto p-2">
           <Link to="/health">
             <Button variant="outline-primary">Health Care</Button>

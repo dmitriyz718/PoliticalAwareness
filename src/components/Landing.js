@@ -32,7 +32,7 @@ class Landing extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash</h1>
+          <h1>Informed</h1>
           <Form onSubmit={this.onSubmit}>
             <Input
               type="text"
