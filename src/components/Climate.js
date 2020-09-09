@@ -24,6 +24,7 @@ class Climate extends Component {
     e.preventDefault();
     this.props.fetchNews(this.state.key);
   };
+
   render() {
     const newsItems = this.props.news.map((article) => {
       return (

@@ -1,4 +1,4 @@
-# Political Awareness
+# News Dash
 
 ## User Stories
 
