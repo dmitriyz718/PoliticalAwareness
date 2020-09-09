@@ -86,6 +86,7 @@ class Landing extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => ({
   news: state.news.news,
 });

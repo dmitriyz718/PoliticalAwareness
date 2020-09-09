@@ -30,15 +30,7 @@ class Climate extends Component {
       return (
         <Row>
           <Col xs="auto">
-            <Card
-              key={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
+            <Card key={article.id}>
               <CardImg
                 top
                 width="100%"
