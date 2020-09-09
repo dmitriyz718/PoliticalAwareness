@@ -27,17 +27,8 @@ class Health extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Row>
-          <Col xs="auto">
-            <Card
-              key={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
+          <Col xs="3">
+            <Card className="article-card" key={article.id}>
               <CardImg
                 src={article.urlToImage}
                 alt="Card image cap"
@@ -47,23 +38,18 @@ class Health extends Component {
                   <strong>{article.title}</strong>
                 </CardTitle>
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
+                <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
                 <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  View Article
-                </Button>
               </CardBody>
             </Card>
           </Col>
-        </Row>
       );
     });
     return (
-      <Container>
-        <div>
-          <h1>Informed - Health Care</h1>
-          <Row>{newsItems}</Row>
-        </div>
-      </Container>
+      <div>
+        <h1>Informed - Health Care</h1>
+        <Row>{newsItems}</Row>
+      </div>
     );
   }
 }

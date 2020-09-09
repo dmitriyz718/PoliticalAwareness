@@ -11,34 +11,34 @@ class Navigation extends Component {
       <Navbar>
         <Nav>
         <Link to="/">
-            <Button variant="outline-primary">Top News</Button>
+            <Button className="nav-btn">Top News</Button>
           </Link>
           <Link to="/health">
-            <Button variant="outline-primary">Health Care</Button>
+            <Button className="nav-btn">Health Care</Button>
           </Link>
           <Link to="/immigration">
-            <Button variant="outline-primary">Immigration</Button>
+            <Button className="nav-btn">Immigration</Button>
           </Link>
           <Link to="/voting">
-            <Button variant="outline-primary">Voting</Button>
+            <Button className="nav-btn">Voting</Button>
           </Link>
           <Link to="/climate">
-            <Button variant="outline-primary">Climate</Button>
+            <Button className="nav-btn">Climate</Button>
           </Link>
           <Link to="/education">
-            <Button variant="outline-primary">Education</Button>
+            <Button className="nav-btn">Education</Button>
           </Link>
           <Link to="/foreign">
-            <Button variant="outline-primary">Foreign Policy</Button>
+            <Button className="nav-btn">Foreign Policy</Button>
           </Link>
           <Link to="/economy">
-            <Button variant="outline-primary">Economy</Button>
+            <Button className="nav-btn">Economy</Button>
           </Link>
           <Link to="/guns">
-            <Button variant="outline-primary">Gun Policy</Button>
+            <Button className="nav-btn">Gun Policy</Button>
           </Link>
           <Link to="/criminal">
-            <Button variant="outline-primary">Criminal Justice</Button>
+            <Button className="nav-btn">Criminal Justice</Button>
           </Link>
           {/*             <Nav.Link href="/immigration">Immigration</Nav.Link>
             <Nav.Link href="/voting">Voting</Nav.Link>
