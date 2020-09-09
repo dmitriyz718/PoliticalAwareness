@@ -32,7 +32,6 @@ class App extends Component {
           <Container>
             <div div className="App">
               <Routes />
-              <Trending />
             </div>
           </Container>
         </Router>
