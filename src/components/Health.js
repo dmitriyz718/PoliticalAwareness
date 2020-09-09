@@ -29,7 +29,29 @@ class Health extends Component {
       return (
         <Row>
           <Col xs="auto">
+<<<<<<< HEAD
             <Card id={article.id}>
+||||||| merged common ancestors
+            <Card
+              id={article.id}
+              style={{
+                height: "40%",
+                width: "40%",
+                border: "solid",
+                margin: "2rem",
+              }}
+            >
+=======
+            <Card
+              key={article.id}
+              style={{
+                height: "40%",
+                width: "40%",
+                border: "solid",
+                margin: "2rem",
+              }}
+            >
+>>>>>>> master
               <CardImg
                 src={article.urlToImage}
                 alt="Card image cap"
@@ -38,7 +60,7 @@ class Health extends Component {
                 <CardTitle>
                   <strong>{article.title}</strong>
                 </CardTitle>
-                <CardSubtitle>Athor: {article.author}</CardSubtitle>
+                <CardSubtitle>Author: {article.author}</CardSubtitle>
                 <CardText>{article.description}</CardText>
                 <Button color="primary" size="lg" active>
                   View Article

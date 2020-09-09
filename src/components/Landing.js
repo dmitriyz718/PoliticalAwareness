@@ -29,6 +29,78 @@ class Landing extends Component {
     this.props.fetchNews(this.state.key);
   };
   render() {
+<<<<<<< HEAD
+||||||| merged common ancestors
+    const newsItems = this.props.news.map((article) => {
+      return (
+        <Row>
+          <Col xs="auto">
+            <Card
+              id={article.id}
+              style={{
+                height: "40%",
+                width: "40%",
+                border: "solid",
+                margin: "2rem",
+              }}
+            >
+              <CardImg
+                top
+                width="100%"
+                src={article.urlToImage}
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardTitle>
+                  <strong>{article.title}</strong>
+                </CardTitle>
+                <CardSubtitle>Athor: {article.author}</CardSubtitle>
+                <CardText>{article.description}</CardText>
+                <Button color="primary" size="lg" active>
+                  View Article
+                </Button>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      );
+    });
+=======
+    const newsItems = this.props.news.map((article) => {
+      return (
+        <Row>
+          <Col xs="auto">
+            <Card
+              key={article.id}
+              style={{
+                height: "40%",
+                width: "40%",
+                border: "solid",
+                margin: "2rem",
+              }}
+            >
+              <CardImg
+                top
+                width="100%"
+                src={article.urlToImage}
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardTitle>
+                  <strong>{article.title}</strong>
+                </CardTitle>
+                <CardSubtitle>Author: {article.author}</CardSubtitle>
+                <CardText>{article.description}</CardText>
+                <Button color="primary" size="lg" active>
+                  View Article
+                </Button>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      );
+    });
+>>>>>>> master
     return (
       <Container>
         <div>
