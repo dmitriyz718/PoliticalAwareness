@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
 import { connect } from "react-redux";
 import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
+  Container,
   Button,
   Row,
   Col,

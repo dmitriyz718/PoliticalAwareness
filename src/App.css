@@ -8,3 +8,7 @@
 .card-img {
   width: 100%;
 }
+
+.row {
+  display: flex;
+}
