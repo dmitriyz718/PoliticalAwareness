@@ -16,6 +16,7 @@ import {
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
 import Trending from "./Trending";
+import NewsItem from "./NewsItem";
 
 
 class Landing extends Component {
@@ -33,26 +34,6 @@ class Landing extends Component {
     this.props.fetchNews(this.state.key);
   };
   render() {
-    const newsItems = this.props.news.map((article) => {
-      return (
-        <Card id={article.id}>
-          <CardImg
-            src={article.urlToImage}
-            alt="Card image cap"
-          />
-          <CardBody>
-            <CardTitle>
-              <strong>{article.title}</strong>
-            </CardTitle>
-            <CardSubtitle>Athor: {article.author}</CardSubtitle>
-            <CardText>{article.description}</CardText>
-            <Button color="primary" size="lg" active>
-              View Article
-            </Button>
-          </CardBody>
-        </Card>
-      );
-    });
     return (
       <Container>
         <div>
@@ -71,7 +52,7 @@ class Landing extends Component {
           </Form>
           <Row>
             <Col xs="auto">
-              {newsItems}
+              <NewsItem/>
             </Col>
             <Col>
               <Trending/>

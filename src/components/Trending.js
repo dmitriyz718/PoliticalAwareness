@@ -36,16 +36,8 @@ class Trending extends Component {
           <Col xs="auto">
             <Card
               id={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
             >
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
