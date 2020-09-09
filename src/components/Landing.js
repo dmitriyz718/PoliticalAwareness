@@ -15,6 +15,9 @@ import {
   Input,
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
+import Trending from "./Trending";
+
+
 class Landing extends Component {
   state = {
     key: "",
@@ -32,36 +35,22 @@ class Landing extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Row>
-          <Col xs="auto">
-            <Card
-              id={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
-              <CardImg
-                top
-                width="100%"
-                src={article.urlToImage}
-                alt="Card image cap"
-              />
-              <CardBody>
-                <CardTitle>
-                  <strong>{article.title}</strong>
-                </CardTitle>
-                <CardSubtitle>Athor: {article.author}</CardSubtitle>
-                <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  View Article
-                </Button>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
+        <Card id={article.id}>
+          <CardImg
+            src={article.urlToImage}
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>
+              <strong>{article.title}</strong>
+            </CardTitle>
+            <CardSubtitle>Athor: {article.author}</CardSubtitle>
+            <CardText>{article.description}</CardText>
+            <Button color="primary" size="lg" active>
+              View Article
+            </Button>
+          </CardBody>
+        </Card>
       );
     });
     return (
@@ -80,7 +69,14 @@ class Landing extends Component {
               Search
             </Button>
           </Form>
-          {newsItems}
+          <Row>
+            <Col xs="auto">
+              {newsItems}
+            </Col>
+            <Col>
+              <Trending/>
+            </Col>
+          </Row>
         </div>
       </Container>
     );
@@ -89,4 +85,4 @@ class Landing extends Component {
 const mapStateToProps = (state) => ({
   news: state.news.news,
 });
-export default connect(mapStateToProps, { fetchNews })(Landing);
+export default connect(mapStateToProps, { fetchNews })(Landing, Trending);
