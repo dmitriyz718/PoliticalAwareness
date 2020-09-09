@@ -29,51 +29,9 @@ class Immigration extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-<<<<<<< HEAD
-        <NewsItem />
-||||||| merged common ancestors
         <Row>
           <Col xs="auto">
-            <Card
-              id={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
-              <CardImg
-                top
-                width="100%"
-                src={article.urlToImage}
-                alt="Card image cap"
-              />
-              <CardBody>
-                <CardTitle>
-                  <strong>{article.title}</strong>
-                </CardTitle>
-                <CardSubtitle>Athor: {article.author}</CardSubtitle>
-                <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  View Article
-                </Button>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-=======
-        <Row>
-          <Col xs="auto">
-            <Card
-              key={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
+            <Card key={article.id}>
               <CardImg
                 top
                 width="100%"
@@ -93,7 +51,6 @@ class Immigration extends Component {
             </Card>
           </Col>
         </Row>
->>>>>>> master
       );
     });
     return (

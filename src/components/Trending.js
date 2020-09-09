@@ -35,17 +35,6 @@ class Trending extends Component {
         <Row>
           <Col xs="auto">
             <Card
-<<<<<<< HEAD
-              id={article.id}
-||||||| merged common ancestors
-              id={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-=======
               key={article.id}
               style={{
                 height: "40%",
@@ -53,7 +42,6 @@ class Trending extends Component {
                 border: "solid",
                 margin: "2rem",
               }}
->>>>>>> master
             >
               <CardImg
                 src={article.urlToImage}
