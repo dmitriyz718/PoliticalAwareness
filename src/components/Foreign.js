@@ -30,7 +30,7 @@ class Foreign extends Component {
         <Row>
           <Col xs="auto">
             <Card
-              id={article.id}
+              key={article.id}
               style={{
                 height: "40%",
                 width: "40%",
@@ -62,7 +62,7 @@ class Foreign extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Foreign Policy</h1>
+          <h1>Informed - Foreign Policy</h1>
           {newsItems}
         </div>
       </Container>

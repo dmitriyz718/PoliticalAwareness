@@ -30,7 +30,7 @@ class Criminal extends Component {
         <Row>
           <Col xs="auto">
             <Card
-              id={article.id}
+              key={article.id}
               style={{
                 height: "40%",
                 width: "40%",
@@ -62,7 +62,7 @@ class Criminal extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Criminal Justice</h1>
+          <h1>Informed - Criminal Justice</h1>
           {newsItems}
         </div>
       </Container>

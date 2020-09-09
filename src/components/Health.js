@@ -30,7 +30,7 @@ class Health extends Component {
         <Row>
           <Col xs="auto">
             <Card
-              id={article.id}
+              key={article.id}
               style={{
                 height: "40%",
                 width: "40%",
@@ -62,7 +62,7 @@ class Health extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Health Care</h1>
+          <h1>Informed - Health Care</h1>
           {newsItems}
         </div>
       </Container>

@@ -35,7 +35,7 @@ class Trending extends Component {
         <Row>
           <Col xs="auto">
             <Card
-              id={article.id}
+              key={article.id}
               style={{
                 height: "40%",
                 width: "40%",
@@ -67,7 +67,7 @@ class Trending extends Component {
     return (
       <Container>
         <div>
-          <h1>Trending Now</h1>
+          <h1>Informed - Trending Now</h1>
           <Form onSubmit={this.onSubmit}>
             <Input
               type="text"

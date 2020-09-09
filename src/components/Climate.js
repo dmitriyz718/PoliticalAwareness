@@ -24,13 +24,14 @@ class Climate extends Component {
     e.preventDefault();
     this.props.fetchNews(this.state.key);
   };
+
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
         <Row>
           <Col xs="auto">
             <Card
-              id={article.id}
+              key={article.id}
               style={{
                 height: "40%",
                 width: "40%",
@@ -62,7 +63,7 @@ class Climate extends Component {
     return (
       <Container>
         <div>
-          <h1>News Dash - Climate News</h1>
+          <h1>Informed - Climate News</h1>
           {newsItems}
         </div>
       </Container>
