@@ -39,8 +39,6 @@ class Health extends Component {
               }}
             >
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
