@@ -13,8 +13,8 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
+          <Navigation />
           <Container>
-            <Navigation />
             <div div className="App">
               <Routes />
               <Trending />

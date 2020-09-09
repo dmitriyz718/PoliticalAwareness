@@ -63,7 +63,7 @@ class Health extends Component {
       <Container>
         <div>
           <h1>Informed - Health Care</h1>
-          {newsItems}
+          <Row>{newsItems}</Row>
         </div>
       </Container>
     );

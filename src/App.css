@@ -1,9 +1,9 @@
-.App {
-  text-align: center;
+.card {
+  margin: 2rem;
 }
 
 #nav {
-  width: 100%
+  width: 100%;
 }
 
 body {
