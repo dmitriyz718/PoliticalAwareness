@@ -8,9 +8,9 @@ import { fetchNews } from "../actions/News";
 class Navigation extends Component {
   render() {
     return (
-      <Navbar>
+      <Navbar style={{ justifyContent: "center" }}>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" onClick={this.toggle}>
           <Nav>
             <Link to="/">
               <Button className="nav-btn">Top News</Button>
