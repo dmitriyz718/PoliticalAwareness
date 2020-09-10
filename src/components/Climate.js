@@ -28,12 +28,12 @@ class Climate extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Col>
-          <Row>
-            <Card key={article.id}>
+        <Col xs="3">
+            <Card
+              key={article.id}
+              className="article-card"
+            >
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
@@ -42,25 +42,20 @@ class Climate extends Component {
                   <strong>{article.title}</strong>
                 </CardTitle>
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
+                <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
                 <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  <a href={article.url} target="_blank" id="article-link">
-                    View Article
-                  </a>
-                </Button>
               </CardBody>
             </Card>
-          </Row>
         </Col>
       );
     });
-    return (
-      <Container className="themed-container" fluid="sm">
+    return (  
         <div>
           <h1>Informed - Climate News</h1>
-          {newsItems}
+          <Row>
+            {newsItems}
+          </Row>
         </div>
-      </Container>
     );
   }
 }

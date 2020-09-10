@@ -2,17 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   Container,
-  Button,
   Row,
   Col,
-  Form,
-  Input,
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
 import Trending from "./Trending";
 import NewsItem from "./NewsItem";
-import Navigation from "./Navigation";
-
 
 class Landing extends Component {
   render() {
