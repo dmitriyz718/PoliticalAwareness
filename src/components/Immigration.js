@@ -40,6 +40,7 @@ class Immigration extends Component {
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
                 <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
                 <CardText>{article.description}</CardText>
+
               </CardBody>
             </Card>
           </Col>

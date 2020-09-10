@@ -19,7 +19,7 @@ class NewsItem extends Component {
 
   componentDidMount() {
     this.props.fetchNews();
-  };
+  }
 
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -34,10 +34,7 @@ class NewsItem extends Component {
     const newsItems = this.props.news.map((article) => {
       return (
         <Card id={article.id}>
-          <CardImg
-            src={article.urlToImage}
-            alt="Card image cap"
-          />
+          <CardImg src={article.urlToImage} alt="Card image cap" />
           <CardBody>
             <CardTitle>
               <strong>{article.title}</strong>
@@ -45,17 +42,15 @@ class NewsItem extends Component {
             <CardSubtitle>Author: {article.author}</CardSubtitle>
             <CardText>{article.description}</CardText>
             <Button color="primary" size="lg" active>
-              View Article
+              <a href={article.url} target="_blank" id="article-link">
+                View Article
+              </a>
             </Button>
           </CardBody>
         </Card>
-      )
-    })
-    return (
-      <Col>
-        {newsItems}
-      </Col>
-    )
+      );
+    });
+    return <Col>{newsItems}</Col>;
   }
 }
 
