@@ -37,7 +37,11 @@ class NewsItem extends Component {
           <CardImg src={article.urlToImage} alt="Card image cap" />
           <CardBody>
             <CardTitle>
-              <strong>{article.title}</strong>
+              <strong>
+                <a href={article.url} target="_blank">
+                  {article.title}
+                </a>
+              </strong>
             </CardTitle>
             <CardSubtitle>Author: {article.author}</CardSubtitle>
             <CardText>{article.description}</CardText>
