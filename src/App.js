@@ -7,6 +7,7 @@ import Routes from "./config/Routes";
 import { Provider } from "react-redux";
 import { Container, Form, Input, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+require("dotenv").config();
 class App extends Component {
   render() {
     return (

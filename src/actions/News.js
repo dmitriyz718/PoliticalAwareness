@@ -1,4 +1,5 @@
 import { FETCH_NEWS, FETCH_ARTICLE, TRENDING_NEWS } from "./types";
+require("dotenv").config();
 export const fetchNews = (key) => (dispatch) => {
   let url = "";
   if (key == "") {
@@ -7,14 +8,14 @@ export const fetchNews = (key) => (dispatch) => {
       "q=donald trump&" +
       "from=2020-09-08&" +
       "sortBy=popularity&" +
-      "apiKey=fbd471666ac742f6b216645a7345e0fe";
+      `apiKey=${process.env.REACT_APP_NEWSAPI}`;
   } else {
     url =
       "http://newsapi.org/v2/everything?" +
       `q=${key}&` +
       "from=2020-09-08&" +
       "sortBy=popularity&" +
-      "apiKey=fbd471666ac742f6b216645a7345e0fe";
+      `apiKey=${process.env.REACT_APP_NEWSAPI}`;
   }
 
   let req = new Request(url);
@@ -32,8 +33,7 @@ export const fetchNews = (key) => (dispatch) => {
     });
 };
 export const trendingNews = () => (dispatch) => {
-  let url =
-    "https://newsapi.org/v2/top-headlines?country=us&totalresults=5&apiKey=fbd471666ac742f6b216645a7345e0fe";
+  let url = `https://newsapi.org/v2/top-headlines?country=us&totalresults=5&apiKey=${process.env.REACT_APP_NEWSAPI}`;
 
   let req = new Request(url);
   fetch(req)
