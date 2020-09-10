@@ -28,7 +28,7 @@ class Voting extends Component {
     const newsItems = this.props.news.map((article) => {
       return (
         <Col xs="3">
-          <Card key={article.id}>
+          <Card className="article-card" key={article.id}>
             <CardImg src={article.urlToImage} alt="Card image cap" />
             <CardBody>
               <CardTitle>
