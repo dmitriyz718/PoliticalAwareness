@@ -45,7 +45,7 @@ class NewsItem extends Component {
             </CardTitle>
             <CardSubtitle>Author: {article.author}</CardSubtitle>
             <CardText className="Featured-text">{article.description}</CardText>
-            <Button color="primary" size="lg" active>
+            <Button color="primary" size="sm" active>
               <a href={article.url} target="_blank" id="article-link">
                 View Article
               </a>

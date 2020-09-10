@@ -55,7 +55,7 @@ class Trending extends Component {
         );
       });
     return (
-        <div>
+        <div className="trending-container">
           <h1>Trending Now</h1>
           {displayNews}
         </div>
