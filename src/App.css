@@ -2,16 +2,44 @@
   font-family: "Playfair Display", serif;
 }
 
+.container {
+  margin-top: 24px;
+}
+
 /*------------- Featured Cards ------------- */
 
 .Featured.card {
   flex-direction: row;
   border: none;
+  margin-bottom: 24px;
 }
 
 .Featured-image.card-img {
-  width: 50%;
+  width: 30%;
   height: auto;
+}
+
+.Featured-title.card-title {
+  font-family: 'Merriweather', serif;
+  color: #000000;
+  font-size: 18px;
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Featured-text.card-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #000000;
+  display: -webkit-box;
+  width: 400px;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
 }
 
 /*------------- Article Cards ------------- */

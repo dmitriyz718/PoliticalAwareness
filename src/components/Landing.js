@@ -15,7 +15,7 @@ class Landing extends Component {
       <Container>
         <Row>
             <NewsItem/>
-          <Col>
+          <Col xs="3">
             <Trending/>
           </Col>
         </Row>
