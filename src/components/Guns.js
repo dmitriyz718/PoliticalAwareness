@@ -43,7 +43,9 @@ class Guns extends Component {
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
                 <CardText>{article.description}</CardText>
                 <Button color="primary" size="lg" active>
-                  View Article
+                  <a href={article.url} target="_blank" id="article-link">
+                    View Article
+                  </a>
                 </Button>
               </CardBody>
             </Card>

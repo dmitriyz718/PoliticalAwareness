@@ -45,7 +45,9 @@ class Immigration extends Component {
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
                 <CardText>{article.description}</CardText>
                 <Button color="primary" size="lg" active>
-                  View Article
+                  <a href={article.url} target="_blank" id="article-link">
+                    View Article
+                  </a>
                 </Button>
               </CardBody>
             </Card>
@@ -57,9 +59,7 @@ class Immigration extends Component {
       <Container>
         <div>
           <h1>Informed - Immigration</h1>
-          <Col>
-          {newsItems}
-          </Col>
+          <Col>{newsItems}</Col>
         </div>
       </Container>
     );

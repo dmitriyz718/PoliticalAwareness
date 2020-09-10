@@ -34,19 +34,8 @@ class Trending extends Component {
       return (
         <Row>
           <Col xs="auto">
-            <Card
-              key={article.id}
-              style={{
-                height: "40%",
-                width: "40%",
-                border: "solid",
-                margin: "2rem",
-              }}
-            >
-              <CardImg
-                src={article.urlToImage}
-                alt="Card image cap"
-              />
+            <Card key={article.id}>
+              <CardImg src={article.urlToImage} alt="Card image cap" />
               <CardBody>
                 <CardTitle>
                   <strong>{article.title}</strong>
@@ -54,7 +43,9 @@ class Trending extends Component {
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
                 <CardText>{article.description}</CardText>
                 <Button color="primary" size="lg" active>
-                  View Article
+                  <a href={article.url} target="_blank" id="article-link">
+                    View Article
+                  </a>
                 </Button>
               </CardBody>
             </Card>

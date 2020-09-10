@@ -1,5 +1,5 @@
 .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .card-img {
@@ -11,8 +11,11 @@
 .row {
   display: flex;
 }
+#article-link {
+  color: whitesmoke;
+}
 
-.global-search{ 
+.global-search {
   display: flex;
   justify-content: space-between;
   padding: 16px;
@@ -38,7 +41,7 @@
 
 .btn.btn-primary:active {
   background-color: #000000;
-  border:none;
+  border: none;
   border-radius: 50px;
   padding: 8px 16px;
   margin-left: 8px;
@@ -48,7 +51,7 @@
 .btn.btn-primary {
   color: #000000;
   background-color: #ffffff;
-  border:none;
+  border: none;
   border-radius: 50px;
   padding: 8px 16px;
   margin-left: 8px;
@@ -58,7 +61,7 @@
 .btn.btn-primary:hover {
   color: #ffffff;
   background-color: #000000;
-  border:none;
+  border: none;
   border-radius: 50px;
   padding: 8px 16px;
   margin-left: 8px;
