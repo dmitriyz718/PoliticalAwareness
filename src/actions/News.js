@@ -4,14 +4,14 @@ export const fetchNews = (key) => (dispatch) => {
   let url = "";
   if (key == "") {
     url =
-      "http://newsapi.org/v2/everything?" +
+      "https://newsapi.org/v2/everything?" +
       "q=donald trump&" +
       "from=2020-09-08&" +
       "sortBy=popularity&" +
       `apiKey=${process.env.REACT_APP_NEWSAPI}`;
   } else {
     url =
-      "http://newsapi.org/v2/everything?" +
+      "https://newsapi.org/v2/everything?" +
       `q=${key}&` +
       "from=2020-09-08&" +
       "sortBy=popularity&" +
