@@ -12,7 +12,6 @@ import {
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
 
-
 class Immigration extends Component {
   componentDidMount() {
     this.props.fetchNews("immigration");
@@ -28,31 +27,31 @@ class Immigration extends Component {
     const newsItems = this.props.news.map((article) => {
       return (
         <Col xs="3">
-            <Card className="article-card" key={article.id}>
-              <CardImg
-                src={article.urlToImage}
-                alt="Card image cap"
-              />
-              <CardBody>
-                <CardTitle>
-                  <strong>{article.title}</strong>
-                </CardTitle>
-                <CardSubtitle>Author: {article.author}</CardSubtitle>
-                <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
-                <CardText>{article.description}</CardText>
-
-              </CardBody>
-            </Card>
-          </Col>
+          <Card className="article-card" key={article.id}>
+            <CardImg src={article.urlToImage} alt="Card image cap" />
+            <CardBody>
+              <CardTitle>
+                <strong>
+                  <a href={article.url} target="_blank">
+                    {article.title}
+                  </a>
+                </strong>
+              </CardTitle>
+              <CardSubtitle>Author: {article.author}</CardSubtitle>
+              <CardSubtitle className="date">
+                {article.publishedAt}
+              </CardSubtitle>
+              <CardText>{article.description}</CardText>
+            </CardBody>
+          </Card>
+        </Col>
       );
     });
     return (
-        <div>
-          <h1>Informed - Immigration</h1>
-          <Row>
-          {newsItems}
-          </Row>
-        </div>
+      <div>
+        <h1>Informed - Immigration</h1>
+        <Row>{newsItems}</Row>
+      </div>
     );
   }
 }

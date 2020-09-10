@@ -29,16 +29,19 @@ class Elections extends Component {
       return (
         <Col xs="3">
           <Card key={article.id}>
-            <CardImg
-              src={article.urlToImage}
-              alt="Card image cap"
-            />
+            <CardImg src={article.urlToImage} alt="Card image cap" />
             <CardBody>
               <CardTitle>
-                <strong>{article.title}</strong>
+                <strong>
+                  <a href={article.url} target="_blank">
+                    {article.title}
+                  </a>
+                </strong>
               </CardTitle>
               <CardSubtitle>Author: {article.author}</CardSubtitle>
-              <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
+              <CardSubtitle className="date">
+                {article.publishedAt}
+              </CardSubtitle>
               <CardText>{article.description}</CardText>
             </CardBody>
           </Card>
@@ -46,13 +49,10 @@ class Elections extends Component {
       );
     });
     return (
-
-        <div>
-          <h1>Informed - Elections 2020</h1>
-          <Row>
-            {newsItems}
-          </Row>
-        </div>
+      <div>
+        <h1>Informed - Elections 2020</h1>
+        <Row>{newsItems}</Row>
+      </div>
     );
   }
 }
