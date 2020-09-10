@@ -33,8 +33,8 @@ class NewsItem extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Card id={article.id}>
-          <CardImg src={article.urlToImage} alt="Card image cap" />
+        <Card className="Featured" id={article.id}>
+          <CardImg className="Featured-image" src={article.urlToImage} alt="Card image cap" />
           <CardBody>
             <CardTitle>
               <strong>

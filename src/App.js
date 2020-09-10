@@ -26,7 +26,7 @@ class App extends Component {
                 name="key"
                 placeholder="What would you like to learn about today?"
               ></Input>
-              <Button color="primary" size="lg" active>
+              <Button className="primary-search">
                 Search
               </Button>
             </Form>
