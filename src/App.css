@@ -87,6 +87,10 @@
   justify-content: center;
 }
 
+.navbar-expand .navbar-collapse {
+  justify-content: center;
+}
+
 /*------------- Button ------------- */
 
 .btn-primary:not(:disabled):not(.disabled):active {
