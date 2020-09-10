@@ -42,7 +42,7 @@ class NewsItem extends Component {
             <CardTitle>
               <strong>{article.title}</strong>
             </CardTitle>
-            <CardSubtitle>Athor: {article.author}</CardSubtitle>
+            <CardSubtitle>Author: {article.author}</CardSubtitle>
             <CardText>{article.description}</CardText>
             <Button color="primary" size="lg" active>
               View Article

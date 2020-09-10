@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
 import { connect } from "react-redux";
 import {
   Card,
@@ -8,11 +7,11 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
   Row,
   Col,
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
+
 class Health extends Component {
   componentDidMount() {
     this.props.fetchNews("health care");

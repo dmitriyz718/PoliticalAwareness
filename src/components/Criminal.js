@@ -28,11 +28,9 @@ class Criminal extends Component {
     const newsItems = this.props.news.map((article) => {
       return (
         <Row>
-          <Col xs="auto">
-            <Card key={article.id}>
+          <Col xs="3">
+            <Card className="article-card" key={article.id}>
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
@@ -41,10 +39,8 @@ class Criminal extends Component {
                   <strong>{article.title}</strong>
                 </CardTitle>
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
+                <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
                 <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  View Article
-                </Button>
               </CardBody>
             </Card>
           </Col>
@@ -52,12 +48,12 @@ class Criminal extends Component {
       );
     });
     return (
-      <Container>
         <div>
           <h1>Informed - Criminal Justice</h1>
-          {newsItems}
+          <Row>
+            {newsItems}
+          </Row>
         </div>
-      </Container>
     );
   }
 }

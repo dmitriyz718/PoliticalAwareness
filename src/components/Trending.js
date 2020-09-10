@@ -53,9 +53,6 @@ class Trending extends Component {
                 </CardTitle>
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
                 <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  View Article
-                </Button>
               </CardBody>
             </Card>
           </Col>
