@@ -30,28 +30,30 @@ class Trending extends Component {
     this.props.fetchNews(this.state.key);
   };
   render() {
-    const displayNews = this.props.news.trendingNews.map((article) => {
-      return (
-        <Row>
-          <Col xs="auto">
-            <Card key={article.id}>
-              <CardImg src={article.urlToImage} alt="Card image cap" />
-              <CardBody>
-                <CardTitle>
-                  <strong>
-                    <a href={article.url} target="_blank">
-                      {article.title}
-                    </a>
-                  </strong>
-                </CardTitle>
-                <CardSubtitle>Author: {article.author}</CardSubtitle>
-                <CardText>{article.description}</CardText>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      );
-    });
+    const displayNews = this.props.news.trendingNews
+      .slice(0, 5)
+      .map((article) => {
+        return (
+          <Row>
+            <Col xs="auto">
+              <Card key={article.id}>
+                <CardImg src={article.urlToImage} alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>
+                    <strong>
+                      <a href={article.url} target="_blank">
+                        {article.title}
+                      </a>
+                    </strong>
+                  </CardTitle>
+                  <CardSubtitle>Author: {article.author}</CardSubtitle>
+                  <CardText>{article.description}</CardText>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+        );
+      });
     return (
       <Container>
         <div>

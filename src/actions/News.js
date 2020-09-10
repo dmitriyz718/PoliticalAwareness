@@ -33,7 +33,7 @@ export const fetchNews = (key) => (dispatch) => {
 };
 export const trendingNews = () => (dispatch) => {
   let url =
-    "https://newsapi.org/v2/top-headlines?country=us&apiKey=fbd471666ac742f6b216645a7345e0fe";
+    "https://newsapi.org/v2/top-headlines?country=us&totalresults=5&apiKey=fbd471666ac742f6b216645a7345e0fe";
 
   let req = new Request(url);
   fetch(req)
