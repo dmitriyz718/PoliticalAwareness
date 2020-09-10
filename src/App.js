@@ -7,7 +7,7 @@ import Routes from "./config/Routes";
 import { Provider } from "react-redux";
 import { Container, Form, Input, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-require("dotenv").config();
+
 class App extends Component {
   render() {
     return (
@@ -27,9 +27,7 @@ class App extends Component {
                 name="key"
                 placeholder="What would you like to learn about today?"
               ></Input>
-              <Button className="primary-search">
-                Search
-              </Button>
+              <Button className="primary-search">Search</Button>
             </Form>
           </div>
           <Navigation />
