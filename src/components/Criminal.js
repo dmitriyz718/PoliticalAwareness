@@ -27,7 +27,6 @@ class Criminal extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Row>
           <Col xs="3">
             <Card className="article-card" key={article.id}>
               <CardImg
@@ -44,7 +43,6 @@ class Criminal extends Component {
               </CardBody>
             </Card>
           </Col>
-        </Row>
       );
     });
     return (
