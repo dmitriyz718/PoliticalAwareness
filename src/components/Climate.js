@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
+import { Helmet } from "react-helmet";
 import { connect } from "react-redux";
 import {
   Card,
