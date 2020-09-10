@@ -93,12 +93,12 @@
 
 /*------------- Button ------------- */
 
-.btn-primary:not(:disabled):not(.disabled):active {
+.btn-secondary:not(:disabled):not(.disabled):active {
   border-color: #000000 !important;
   background-color: #000000 !important;
 }
 
-.nav-btn.btn.btn-primary:focus {
+.nav-btn.btn.btn-secondary:focus {
   background-color: #000000;
   border-radius: 50px;
   padding: 8px 16px;
@@ -108,7 +108,7 @@
   box-shadow: none;
 }
 
-.btn.btn-primary:target {
+.btn.btn-secondary:target {
   background-color: #000000;
   border: none;
   border-radius: 50px;
@@ -117,7 +117,7 @@
   margin-right: 8px;
 }
 
-.btn.btn-primary {
+.btn.btn-secondary {
   color: #000000;
   background-color: #ffffff;
   border: none;
@@ -127,7 +127,7 @@
   margin-right: 8px;
 }
 
-.btn.btn-primary:hover {
+.btn.btn-secondary:hover {
   color: #ffffff;
   background-color: #000000;
   border: none;
