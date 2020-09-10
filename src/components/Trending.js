@@ -55,24 +55,10 @@ class Trending extends Component {
         );
       });
     return (
-      <Container>
         <div>
-          <h1>Informed - Trending Now</h1>
-          <Form onSubmit={this.onSubmit}>
-            <Input
-              type="text"
-              onChange={this.onChange}
-              id="key"
-              name="key"
-              placeholder="keywords"
-            ></Input>
-            <Button color="primary" size="lg" active>
-              Search
-            </Button>
-          </Form>
+          <h1>Trending Now</h1>
           {displayNews}
         </div>
-      </Container>
     );
   }
 }

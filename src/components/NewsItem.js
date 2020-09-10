@@ -33,10 +33,10 @@ class NewsItem extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Card id={article.id}>
-          <CardImg src={article.urlToImage} alt="Card image cap" />
+        <Card className="Featured" id={article.id}>
+          <CardImg className="Featured-image" src={article.urlToImage} alt="Card image cap" />
           <CardBody>
-            <CardTitle>
+            <CardTitle className="Featured-title">
               <strong>
                 <a href={article.url} target="_blank">
                   {article.title}
@@ -44,7 +44,7 @@ class NewsItem extends Component {
               </strong>
             </CardTitle>
             <CardSubtitle>Author: {article.author}</CardSubtitle>
-            <CardText>{article.description}</CardText>
+            <CardText className="Featured-text">{article.description}</CardText>
             <Button color="primary" size="lg" active>
               <a href={article.url} target="_blank" id="article-link">
                 View Article
