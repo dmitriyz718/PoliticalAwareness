@@ -38,11 +38,6 @@ class Health extends Component {
                 {article.publishedAt}
               </CardSubtitle>
               <CardText>{article.description}</CardText>
-              <Button color="primary" size="lg" active>
-                <a href={article.url} target="_blank" id="article-link">
-                  View Article
-                </a>
-              </Button>
             </CardBody>
           </Card>
         </Col>
