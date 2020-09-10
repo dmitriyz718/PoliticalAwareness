@@ -13,6 +13,7 @@ import {
   Col,
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
+
 class Foreign extends Component {
   componentDidMount() {
     this.props.fetchNews("Foreign policy");
@@ -28,11 +29,9 @@ class Foreign extends Component {
     const newsItems = this.props.news.map((article) => {
       return (
         <Row>
-          <Col xs="auto">
-            <Card key={article.id}>
+          <Col xs="3">
+            <Card className="article-card" key={article.id}>
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
@@ -41,12 +40,8 @@ class Foreign extends Component {
                   <strong>{article.title}</strong>
                 </CardTitle>
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
+                <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
                 <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  <a href={article.url} target="_blank" id="article-link">
-                    View Article
-                  </a>
-                </Button>
               </CardBody>
             </Card>
           </Col>
@@ -54,12 +49,12 @@ class Foreign extends Component {
       );
     });
     return (
-      <Container>
         <div>
           <h1>Informed - Foreign Policy</h1>
-          {newsItems}
+          <Row>
+            {newsItems}
+          </Row>
         </div>
-      </Container>
     );
   }
 }

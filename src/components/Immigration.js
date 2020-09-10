@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
 import { connect } from "react-redux";
 import {
   Card,
@@ -8,12 +7,11 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
   Row,
   Col,
 } from "reactstrap";
 import { fetchNews } from "../actions/News";
-import NewsItem from "./NewsItem";
+
 
 class Immigration extends Component {
   componentDidMount() {
@@ -29,12 +27,9 @@ class Immigration extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Row>
-          <Col xs="auto">
-            <Card key={article.id}>
+        <Col xs="3">
+            <Card className="article-card" key={article.id}>
               <CardImg
-                top
-                width="100%"
                 src={article.urlToImage}
                 alt="Card image cap"
               />
@@ -43,25 +38,21 @@ class Immigration extends Component {
                   <strong>{article.title}</strong>
                 </CardTitle>
                 <CardSubtitle>Author: {article.author}</CardSubtitle>
+                <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
                 <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  <a href={article.url} target="_blank" id="article-link">
-                    View Article
-                  </a>
-                </Button>
+
               </CardBody>
             </Card>
           </Col>
-        </Row>
       );
     });
     return (
-      <Container>
         <div>
           <h1>Informed - Immigration</h1>
-          <Col>{newsItems}</Col>
+          <Row>
+          {newsItems}
+          </Row>
         </div>
-      </Container>
     );
   }
 }

@@ -2,10 +2,55 @@
   font-family: "Playfair Display", serif;
 }
 
+/*------------- Article Cards ------------- */
+
+.article-card.card {
+  border: none;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 .card-img {
   width: 100%;
-  height: 100px;
+  height: 180px;
   object-fit: cover;
+}
+
+.card-title{
+  font-family: 'Merriweather', serif;
+  color: #000000;
+  font-size: 18px;
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #000000;
+  display: -webkit-box;
+  width: 220px;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  margin-bottom: 8px;
+}
+
+.card-subtitle{
+  font-family: 'Montserrat', serif;
+  color: #636363;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.date.card-subtitle{
+  font-family: 'Montserrat', serif;
+  color: #636363;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .row {
@@ -14,6 +59,9 @@
 #article-link {
   color: whitesmoke;
 }
+
+
+/*------------- Search ------------- */
 
 .global-search {
   display: flex;
@@ -39,7 +87,23 @@
   justify-content: center;
 }
 
-.btn.btn-primary:active {
+/*------------- Button ------------- */
+
+.btn-primary:not(:disabled):not(.disabled):active{
+  border-color: #000000 !important;
+  background-color: #000000 !important;
+}
+.nav-btn.btn.btn-primary:focus {
+  background-color: #000000;
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: none;
+  box-shadow: none;
+}
+
+.btn.btn-primary:target {
   background-color: #000000;
   border: none;
   border-radius: 50px;

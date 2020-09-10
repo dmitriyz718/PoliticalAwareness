@@ -27,39 +27,32 @@ class Elections extends Component {
   render() {
     const newsItems = this.props.news.map((article) => {
       return (
-        <Row>
-          <Col xs="auto">
-            <Card key={article.id}>
-              <CardImg
-                top
-                width="100%"
-                src={article.urlToImage}
-                alt="Card image cap"
-              />
-              <CardBody>
-                <CardTitle>
-                  <strong>{article.title}</strong>
-                </CardTitle>
-                <CardSubtitle>Author: {article.author}</CardSubtitle>
-                <CardText>{article.description}</CardText>
-                <Button color="primary" size="lg" active>
-                  <a href={article.url} target="_blank" id="article-link">
-                    View Article
-                  </a>
-                </Button>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
+        <Col xs="3">
+          <Card key={article.id}>
+            <CardImg
+              src={article.urlToImage}
+              alt="Card image cap"
+            />
+            <CardBody>
+              <CardTitle>
+                <strong>{article.title}</strong>
+              </CardTitle>
+              <CardSubtitle>Author: {article.author}</CardSubtitle>
+              <CardSubtitle className="date">{article.publishedAt}</CardSubtitle>
+              <CardText>{article.description}</CardText>
+            </CardBody>
+          </Card>
+        </Col>
       );
     });
     return (
-      <Container>
+
         <div>
           <h1>Informed - Elections 2020</h1>
-          {newsItems}
+          <Row>
+            {newsItems}
+          </Row>
         </div>
-      </Container>
     );
   }
 }
