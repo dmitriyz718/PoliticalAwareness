@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Button } from "reactstrap";
+import { Button } from "reactstrap";
 import { connect } from "react-redux";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -8,9 +8,9 @@ import { fetchNews } from "../actions/News";
 class Navigation extends Component {
   render() {
     return (
-      <Navbar style={{ justifyContent: "center" }}>
+      <Navbar sticky="top" collapseOnSelect expand="lg" id="navbar">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" onClick={this.toggle}>
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Link to="/">
               <Button className="nav-btn">Top News</Button>
